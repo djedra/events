@@ -1,0 +1,95 @@
+.scoreboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    /* Тень для текста */
+}
+
+.scoreboard-score,
+.scoreboard-misses {
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Полупрозрачный фон */
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+    /* Анимация при наведении */
+}
+
+.scoreboard-score:hover,
+.scoreboard-misses:hover {
+    transform: scale(1.1);
+    /* Увеличение при наведении */
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Сделаем фон темнее при наведении */
+}
+
+.scoreboard-score span,
+.scoreboard-misses span {
+    font-size: 22px;
+    color: #ffd700;
+    /* Золотистый цвет для цифр */
+}
+
+.scoreboard-score {
+    background-color: rgba(0, 128, 0, 0.6);
+    /* Зеленый фон для очков */
+}
+
+.scoreboard-misses {
+    background-color: rgba(255, 0, 0, 0.6);
+    /* Красный фон для промахов */
+}
+
+.game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+    gap: 5px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.goblin {
+    width: 100px;
+    height: 100px;
+    transition: transform 0.3s ease;
+    /* Анимация появления/исчезновения */
+}
+
+.goblin:hover {
+    transform: scale(1.1);
+    /* Немного увеличиваем картинку при наведении */
+}
+
+.custom-cursor {
+    position: fixed;
+    width: 35px;
+    height: 35px;
+    background: url('../img/hammer.png') no-repeat center;
+    background-size: contain;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    pointer-events: none;
+    /* Чтобы курсор не мешал другим событиям */
+}
